@@ -1,0 +1,231 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/*
+*   TO DO:
+*       -Create grid system
+*       -Style Login Form
+*       -Style Nav Bar
+*/
+
+/*
+*   Custom Styles
+*/
+
+body {
+    font-size: 100%;
+    width: 100%;
+    height: 100%;
+    margin: 10px;
+    margin-left: -10px;
+    background: #ffffff;
+    position: relative;
+}
+
+/*
+*   Layout
+*/
+.page-wrapper {
+    width: 80%;
+    margin-top: 70px;
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+    font-size: 1.2em;
+    display: block;
+}
+
+.content {
+    width: 100%;
+    margin-top: 20px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    
+}
+
+.content:before {
+    content: "";
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    position: absolute;
+    top: 20px;
+    overflow: visible;
+    margin-right: 5px;
+    background: #00bcd4;
+    -webkit-transform: skewY(2deg);
+    -moz-transform: skewY(2deg);
+    -ms-transform: skewY(2deg);
+    -o-transform: skewY(2deg);
+    transform: skewY(2deg);
+}
+
+.row {
+    margin-left: -10px;
+    margin-right: -10px;
+}
+
+.col-12, .col-8, .col-4, .col-2 {
+    min-height: 1px;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.col-12 {
+    float: left;
+    width: 100%;
+}
+
+/*
+*   Navigation
+*/
+.header {
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    z-index: 1;
+    position: relative;
+    font-size: 1.5em;
+}
+
+.nav-bar {
+    width: 100%;
+}
+
+.nav-bar:after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100px;
+    overflow: visible;
+    background: #00bcd4;
+    bottom: -25px;
+    left: 0;
+    z-index: -1;
+    -webkit-transform: skewY(-2deg);
+    -moz-transform: skewY(-2deg);
+    -ms-transform: skewY(-2deg);
+    -o-transform: skewY(-2deg);
+    transform: skewY(-2deg);
+    -webkit-backface-visibility: hidden;
+    backface-visibility: initial;
+    box-shadow: 0 10px 17px 0 grey;
+}
+
+.nav-bar ul li {
+    text-align: center;
+    float: right;
+    cursor: pointer;
+}
+
+.nav-bar ul li:after {
+    content: "|";
+    font-weight: 600;
+}
+
+.nav-bar ul li:first-child:after {
+    content: "";
+}
+
+.nav-bar ul li a {
+    display: inline-block;
+    text-decoration: none;
+    padding: 10px;
+    white-space: nowrap;
+    font-weight: 900;
+    color: #ffffff;
+    vertical-align: middle;
+    -webkit-transform: perspective(1px) translateZ(0);
+    transform: perspective(1px) translateZ(0);
+    box-shadow: 0 0 1px transparent;
+    position: relative;
+    overflow: hidden;
+}
+.nav-bar ul li a:before {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    left: 50%;
+    right: 50%;
+    bottom: 0;
+    background: #ffffff;
+    height: 4px;
+    -webkit-transition-property: left, right;
+    transition-property: left, right;
+    -webkit-transition-duration: 0.3s;
+    transition-duration: 0.3s;
+    -webkit-transition-timing-function: ease-out;
+    transition-timing-function: ease-out;
+}
+.nav-bar ul li a:hover:before, .nav-bar ul li a:focus:before, .nav-bar ul li a:active:before {
+    left: 5px;
+    right: 5px;
+}
+
+/*
+*   Login 
+*/
+
+/*
+*   Clearfix
+*/
+
+.group {
+    *zoom: 1;
+}
+
+.group:before,
+.group:after {
+    content: " ";
+    display: table;
+}
+
+.group:after {
+    clear: both;
+}

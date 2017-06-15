@@ -1,0 +1,8 @@
+<div ng-controller="navigationCtrl as navCtrl" class="nav-bar row">
+    <ul class="group">
+        <li class="home"><a href="/">Home</a></li>
+        <li ng-hide="navCtrl.isLoggedIn()"><a href="login">Login</a></li>
+        <li ng-show="navCtrl.isLoggedIn()" ng-click="navCtrl.logout()"><a href="/">Logout</a></li>
+        <li ng-show="navCtrl.isLoggedIn()"><a href="profile">{{ navCtrl.currentUser() }}</a></li>
+    </ul>
+</div>
