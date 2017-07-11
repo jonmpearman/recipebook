@@ -14,3 +14,5 @@ mongoose.connection.on('disconnected', function() {
 });
 
 require('./users');
+require('./recipeBook');
+require('./recipe');

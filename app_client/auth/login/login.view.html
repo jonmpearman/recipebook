@@ -1,20 +1,18 @@
 <div>
-    <div>
-        <div ng-controller="loginCtrl as login">
-            <h1>Sign in</h1>
-            <p>Not a member? Please <a href="register">register</a> instead.</p>
-            
-            <form ng-submit="login.onSubmit()">
-                <div>
-                    <label for="email">Email Address</label>
-                    <input type="email" id="email" placeholder="Enter Email Address" ng-model="login.credentials.email"/>
-                </div>
-                <div>
-                    <label for="password">Password</label>
-                    <input type="password" id="password" placeholder="Password" ng-model="login.credentials.password"/>
-                </div>
-                <button type="submit">Sign in</button>
-            </form>
-        </div>
+    <div ng-controller="loginCtrl as login">
+        <h1>Sign in</h1>
+        <p>Not a member? Please <a href="register">register</a> instead.</p>
+
+        <form ng-submit="login.onSubmit()">
+            <div>
+                <label for="email">Email Address</label>
+                <input type="email" id="email" placeholder="Enter Email Address" ng-model="login.credentials.email"/>
+            </div>
+            <div>
+                <label for="password">Password</label>
+                <input type="password" id="password" placeholder="Password" ng-model="login.credentials.password"/>
+            </div>
+            <button type="submit">Sign in</button>
+        </form>
     </div>
 </div>

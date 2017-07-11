@@ -22,8 +22,13 @@ app.config(['$routeProvider', '$locationProvider', function ($routeProvider, $lo
             controllerAs: 'profile',
             templateUrl: '/profile/profile.view.html'
         })
+        .when('/recipes', {
+            controller: 'recipeBookCtrl',
+            controllerAs: 'recipebook',
+            templateUrl: '/recipe/recipe.view.html'
+        })
         .otherwise({ redirectTo: '/' });
-    
+
     $locationProvider.html5Mode(true);
 }]);
 

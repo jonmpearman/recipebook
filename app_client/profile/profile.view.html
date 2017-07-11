@@ -1,17 +1,13 @@
 <div ng-controller="profileCtrl as profile">
     <div>
+        <h1>Your Profile</h1>
         <div>
-            <h1>Your Profile</h1>
-            <form>
-                <div>
-                    <label>Full Name</label>
-                    <p>{{ profile.user.name }}</p>
-                </div>
-                <div>
-                    <label>Email</label>
-                    <p>{{ profile.user.email }}</p>
-                </div>
-            </form>
+            <label>Full Name</label>
+            <p>{{ profile.user.name }}</p>
+        </div>
+        <div>
+            <label>Email</label>
+            <p>{{ profile.user.email }}</p>
         </div>
     </div>
 </div>

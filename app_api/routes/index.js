@@ -8,8 +8,10 @@ var auth = jwt({
 
 var profileCtrl = require('../controllers/profile');
 var authCtrl = require('../controllers/authentication');
+var recipeBookCtrl = require('../controllers/recipebook');
 
 router.get('/profile', auth, profileCtrl.profileRead);
+router.get('/recipebook', recipeBookCtrl.recipeBookRead);
 
 router.post('/register', authCtrl.register);
 router.post('/login', authCtrl.login);
