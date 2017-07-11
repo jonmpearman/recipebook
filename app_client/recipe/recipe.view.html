@@ -1,0 +1,12 @@
+<div ng-controller="recipeBookCtrl as recipebook">
+    <div ng-repeat="recipe in recipebook.recipes">
+        <h1>Recipe Book</h1>
+        <div>
+            <label>recipebook.title</label>
+            <p>{{ recipe }}</p>
+        </div>
+        <div>
+            <button type="button" onclick="recipebook.createBook()">Create Recipe Book</button>
+        </div>
+    </div>
+</div>
