@@ -1,3 +1,4 @@
+#!/usr/bin/env node
 //server.js
 
 var express = require('express');
