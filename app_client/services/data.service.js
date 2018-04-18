@@ -14,13 +14,14 @@ app.factory('dataService', ['$http', 'authentication', 'recipesService', functio
         }
     };
     self.createBook = function() {
-        $http.post('/api/recipebook', {
-            owner: auth.currentUser(),
-            title: 'My Recipe',
-            recipes: recipes.createRecipe(),
-            createdDate: new Date(),
-            recipesCount: 1
-        });
+        // $http.post('/api/recipebook', {
+        //     owner: auth.currentUser(),
+        //     title: 'My Recipe',
+        //     recipes: recipes.createRecipe(),
+        //     createdDate: new Date(),
+        //     recipesCount: 1
+        // });
+        consoloe.log(auth.currentUser());
     };
 
     return {

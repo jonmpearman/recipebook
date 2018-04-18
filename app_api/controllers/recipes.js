@@ -11,7 +11,7 @@ module.exports.addRecipe = function(req, res) {
     recipe.steps = addDirections();
 
     recipe.save(function(err) {
-        if(err) console.log(err);
+        if(err) console.log("Add Recipe: " + err);
 
         res.status(200);
     });
@@ -40,5 +40,5 @@ module.exports.addDirections = function(req, res) {
         if(err) console.log(err);
 
         res.status(200);
-    }
+    });
 };

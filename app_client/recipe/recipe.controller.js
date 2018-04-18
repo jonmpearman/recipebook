@@ -3,7 +3,8 @@ app.controller('recipeBookCtrl', ['$location', 'dataService', function($location
 
     self.recipebook = {};
 
-    dataService.getRecipeBook()
+    self.recipeBook = function() {
+        dataService.getRecipeBook()
         .success(function(data) {
             console.log(data);
             self.recipebook = data;
@@ -11,6 +12,7 @@ app.controller('recipeBookCtrl', ['$location', 'dataService', function($location
         .error(function(err) {
             console.log(err);
         });
+    };
 
     self.createBook = function()    {
         dataService.createBook()
